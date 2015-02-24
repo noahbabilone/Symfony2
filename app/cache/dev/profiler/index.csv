@@ -4,3 +4,9 @@ d6d712,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/platform/adv
 7d93c4,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/platform,1424778437,
 26586f,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DOCPlatformBundle%253AAdvert%253Amenu,1424779065,ffcc6f
 ffcc6f,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/platform/advert/2,1424779065,
+95d0b1,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DOCPlatformBundle%253AAdvert%253Amenu,1424781068,559dc2
+559dc2,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/platform/advert/2,1424781068,
+86bdfe,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DOCPlatformBundle%253AAdvert%253Amenu,1424781385,8c1fb9
+8c1fb9,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/platform/advert/2,1424781385,
+c1cd26,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DOCPlatformBundle%253AAdvert%253Amenu,1424781390,759aa7
+759aa7,127.0.0.1,GET,http://localhost:8888/Symfony2/web/app_dev.php/platform,1424781390,

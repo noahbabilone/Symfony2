@@ -75,6 +75,8 @@ class __TwigTemplate_88f8ae86eaa8502f6f5926b3b47cf2c221408a990dc54fcee9ef1a72c86
 \t          <ul class=\"dropdown-menu\" role=\"menu\">
 \t            <li><a href=\"#\">Action</a></li>
 \t            <li><a href=\"#\">Another action</a></li>
+\t            <li><a href=\"#\">Autres</a></li>
+\t            <li><a href=\"#\">Something else here</a></li>
 \t            <li><a href=\"#\">Something else here</a></li>
 \t            <li class=\"divider\"></li>
 \t            <li><a href=\"#\">Separated link</a></li>
@@ -97,11 +99,7 @@ class __TwigTemplate_88f8ae86eaa8502f6f5926b3b47cf2c221408a990dc54fcee9ef1a72c86
 \t    </div><!-- /.navbar-collapse -->
 \t  </div><!-- /.container-fluid -->
 \t</nav>
-\t
-\t
-\t    
- 
-    <div id=\"\" >
+\t    <div id=\"\" >
     \t<div class=\"jumbotron\">
 \t      <h1>Ma plateforme d'annonces</h1>
 \t      <p>
@@ -120,26 +118,30 @@ class __TwigTemplate_88f8ae86eaa8502f6f5926b3b47cf2c221408a990dc54fcee9ef1a72c86
         <h3>Les annonces</h3>
         <ul class=\"nav nav-pills nav-stacked\">
           <li><a href=\"";
-        // line 89
+        // line 87
         echo $this->env->getExtension('routing')->getPath("oc_platform_home");
         echo "\">Accueil</a></li>
           <li><a href=\"";
-        // line 90
+        // line 88
         echo $this->env->getExtension('routing')->getPath("oc_platform_add");
         echo "\">Ajouter une annonce</a></li>
+          <li><a href=\"";
+        // line 89
+        echo $this->env->getExtension('routing')->getPath("oc_platform_add");
+        echo "\">Contact</a></li>
         </ul>
 
         <h4>Dernières annonces</h4>
         ";
-        // line 94
+        // line 93
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("OCPlatformBundle:Advert:menu", array("limit" => 3)));
         echo "
       </div>
       <div id=\"content\" class=\"col-md-9\">
         ";
-        // line 97
+        // line 96
         $this->displayBlock('body', $context, $blocks);
-        // line 99
+        // line 98
         echo "      </div>
     </div>
 
@@ -147,16 +149,16 @@ class __TwigTemplate_88f8ae86eaa8502f6f5926b3b47cf2c221408a990dc54fcee9ef1a72c86
 
     <footer>
       <p>The sky's the limit © ";
-        // line 105
+        // line 104
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo " and beyond.</p>
     </footer>
   </div>
 
   ";
-        // line 109
+        // line 108
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 114
+        // line 113
         echo "
 </body>
 </html>";
@@ -178,19 +180,19 @@ class __TwigTemplate_88f8ae86eaa8502f6f5926b3b47cf2c221408a990dc54fcee9ef1a72c86
   ";
     }
 
-    // line 97
+    // line 96
     public function block_body($context, array $blocks = array())
     {
-        // line 98
+        // line 97
         echo "        ";
     }
 
-    // line 109
+    // line 108
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 110
+        // line 109
         echo "    ";
-        // line 111
+        // line 110
         echo "    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>
     <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js\"></script>
   ";
@@ -208,6 +210,6 @@ class __TwigTemplate_88f8ae86eaa8502f6f5926b3b47cf2c221408a990dc54fcee9ef1a72c86
 
     public function getDebugInfo()
     {
-        return array (  194 => 111,  192 => 110,  189 => 109,  185 => 98,  182 => 97,  177 => 13,  175 => 12,  172 => 11,  166 => 9,  160 => 114,  158 => 109,  151 => 105,  143 => 99,  141 => 97,  135 => 94,  128 => 90,  124 => 89,  71 => 39,  67 => 38,  58 => 32,  39 => 15,  37 => 11,  32 => 9,  23 => 2,);
+        return array (  196 => 110,  194 => 109,  191 => 108,  187 => 97,  184 => 96,  179 => 13,  177 => 12,  174 => 11,  168 => 9,  162 => 113,  160 => 108,  153 => 104,  145 => 98,  143 => 96,  137 => 93,  130 => 89,  126 => 88,  122 => 87,  71 => 39,  67 => 38,  58 => 32,  39 => 15,  37 => 11,  32 => 9,  23 => 2,);
     }
 }
