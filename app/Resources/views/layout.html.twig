@@ -1,0 +1,116 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% block title %}OC Plateforme{% endblock %}</title>
+
+  {% block stylesheets %}
+    {# On charge le CSS de bootstrap depuis le site directement #}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  {% endblock %}
+</head>
+
+<body>
+
+ <div class="container">
+  	<div class="row">&nbsp;</div>
+	
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ path('oc_platform_home') }}">Ma boutique</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="{{ path('oc_platform_home') }}">Accueil <span class="sr-only">(current)</span></a></li>
+	        <li><a href="{{ path('oc_platform_home') }}">Annonces</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Catégorie <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">One more separated link</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	      <form class="navbar-form navbar-right" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Saisissez votre recherche ">
+	        </div>
+	        <button type="submit" class="btn btn-default">Ok</button>
+	      </form>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">Connexion</a></li>
+	        <li><a href="#">Inscription</a></li>
+	        <li><a href="#">Mon panier(0)</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	
+	
+	    
+ 
+    <div id="" >
+    	<div class="jumbotron">
+	      <h1>Ma plateforme d'annonces</h1>
+	      <p>
+	        Ce projet est propulsé par Symfony2,
+	        et construit grâce au MOOC OpenClassrooms et SensioLabs.
+	      </p>
+	      <p>
+	        <a class="btn btn-primary btn-lg" href="http://fr.openclassrooms.com/informatique/cours/developpez-votre-site-web-avec-le-framework-symfony2">
+	          Participer au MOOC »
+	        </a>
+	      </p>
+    	</div>
+    </div>
+    <div class="row">
+      <div id="menu" class="col-md-3">
+        <h3>Les annonces</h3>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="{{ path('oc_platform_home') }}">Accueil</a></li>
+          <li><a href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>
+        </ul>
+
+        <h4>Dernières annonces</h4>
+        {{ render(controller("OCPlatformBundle:Advert:menu", {'limit': 3})) }}
+      </div>
+      <div id="content" class="col-md-9">
+        {% block body %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <hr>
+
+    <footer>
+      <p>The sky's the limit © {{ 'now'|date('Y') }} and beyond.</p>
+    </footer>
+  </div>
+
+  {% block javascripts %}
+    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  {% endblock %}
+
+</body>
+</html>
